@@ -1,78 +1,24 @@
-TypeScript Boilerplate
+LoxNode Server
 ======================
-A Grunt TypeScript Boilerplate and Workflow. Checkout the [TypeScript Boilerplate and Workflow Tutorial](http://www.codebelt.com/typescript/my-typescript-workflow-examples/).
-
-Be sure to check out all my [TypeScript tutorials and examples](http://www.codebelt.com/category/typescript/).
+Description
 
 
-###GruntJS - Getting Started
+GruntJS - Getting Started
 ----------
-Have you ever used different tools to minify CSS and JavaScript? Wouldn't it be great if you could automatically do this without needing to install special OS applications or backend-specific tools? Wouldn't it be great if there was just one easy workflow and command to do this? The answer is `grunt`!
 
-####What is Grunt
-
-Grunt is a command line task runner that will run tasks/plugins that perform repetitive tasks like minification, compilation, unit testing, linting, etc. Grunt is dependent on having [Node.js](http://nodejs.org) installed, but that is all you need to know about nodejs. You can check out the __Install Grunt__ section below later.
-
-####Grunt Setup
-
-At bare minimum we need have a `package.json` file and a `Gruntfile.js` file.
-
-1. The `package.json` file will list what plugins we want to use.
-2. The `Gruntfile.js` file is where we will confingure those plugins that are mentioned in the `package.json` file.
-
-__Empty package.json File__
+__Install NPM Modules__
 
 ```
-{
-  "name": "my-project-name",
-  "version": "0.1.0",
-  "devDependencies": {
-    "grunt": "~0.4.1",
-    
-    // Add your plugins here
-    
-  }
-}
+npm install
 ```
 
-__Empty Gruntfile.js File__
+#### Grunt Tasks
+
+__Develop and Test__
 
 ```
-module.exports = function(grunt) {
-
-	grunt.initConfig({
-  		pkg: grunt.file.readJSON('package.json'),
-
-		// Add configuration options for each of your plugins here
-	
-	});
-	
-};
+grunt server
 ```
-
-####Adding Grunt Tasks
-You can find a lot of Grunt plugins at [http://gruntjs.com/plugins](http://gruntjs.com/plugins), but for now let's add a RequireJS plugin which will help us create a minified version of our JavaScript code suitable for production use.
-
-__package.json with RequireJS Plugin__
-
-```
-{
-  "name": "my-project-name",
-  "version": "0.1.0",
-  "devDependencies": {
-    "grunt": "~0.4.1",
-    
-    // Added plugin name with current plugin version.
-    "grunt-contrib-requirejs": "~0.4.0",
-    
-  }
-}
-```
-Before you can start using the plugins, we need to download them to our project folder. 
-
-First, with Terminal or the Command Line, navigate to the directory that has the `package.json` and `Gruntfile.js` files.
-
-Next, type `npm install` for Windows or `sudo npm install` for Mac. This command will automatically download each of the plugins specified in your `package.json` file. The plugins will be downloaded into a new `node_modules` folder in the same directory.
 
 __Gruntfile.js with RequireJS Plugin__
 
